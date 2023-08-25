@@ -1,0 +1,32 @@
+server:
+  port: 8081
+  servlet:
+    #    context-path: /api/ws
+    session:
+      timeout: 604800s
+      cookie:
+        max-age: 604800s
+dev-auth: true
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: app.1
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      topic: parsed-item
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  freemarker:
+    expose-request-attributes: true
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
