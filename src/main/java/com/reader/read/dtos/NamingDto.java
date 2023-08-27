@@ -11,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NamingDto {
-    @JsonIgnore
     private Long id;
     private String naming_rus;
     private String naming_en;

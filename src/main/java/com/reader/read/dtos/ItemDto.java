@@ -11,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ItemDto {
-    @JsonIgnore
     private Long id;
     private ConditionDto conditionDto;
     private WeaponTypeDto weaponTypeDto;

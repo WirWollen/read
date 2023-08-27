@@ -11,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WeaponTypeDto {
-    @JsonIgnore
     private Long id;
     private String type;
 }

@@ -11,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ConditionDto {
-    @JsonIgnore
     private Long id;
     private String condition;
 }
