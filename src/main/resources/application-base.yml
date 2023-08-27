@@ -10,6 +10,7 @@ dev-auth: true
 spring:
   kafka:
     consumer:
+      topic: parsed-item
       bootstrap-servers: localhost:9092
       group-id: app.1
       auto-offset-reset: earliest
