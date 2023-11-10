@@ -1,13 +1,13 @@
-package com.reader.read.config;
+package com.reader.read.services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.reader.read.dtos.ItemDto;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class DataListenerConfig {
+@Service
+public class DataListenerService {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @KafkaListener(topics = "${spring.kafka.consumer.topic}", groupId = "${spring.kafka.consumer.group-id}")
